@@ -1,0 +1,85 @@
+@use "global" as *;
+
+.law__inner {
+    margin-top: prem(40);
+    padding-left: prem(20);
+    padding-right: prem(20);
+    @include mq(md) {
+        margin-top: prem(100);
+    }
+}
+
+.law__title span {
+    top: prem(-50);
+}
+
+.law__table {
+    display: block;
+    width: 100%;
+    border: prem(1) solid #002D74;
+    @include mq(md) {
+        @include mq(md) {
+            max-width: prem(956);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    tbody {
+        width: 100%;
+        display: block;
+    }
+
+    tr {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include mq(md) {
+            flex-direction: row;
+        }
+
+        &:nth-child(n+2) {
+            border-top: prem(1) solid #002D74;
+        }
+    }
+
+    th,td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        font-size: prem(20);
+        font-weight: $bold;
+        text-align: center;
+        padding: prem(20) prem(10);
+        @include mq(md) {
+            max-width: prem(342);
+            font-size: prem(24);
+            padding: prem(40) prem(10);
+        }
+    }
+
+    td {
+        font-size: prem(14);
+        font-weight: $medium;
+        padding: prem(20) prem(10);
+        text-align: center;
+        border-top: prem(1) solid #002D74;
+        @include mq(md) {
+            font-size: prem(20);
+            max-width: prem(616);
+            padding: prem(42) prem(80);
+            border-top:none;
+            text-align: left;
+            border-left: prem(1) solid #002D74;
+        }
+
+        .indent-1 {
+            padding-left: 1em;
+            text-indent: -1em;
+            text-align: left;
+        }
+    }
+}

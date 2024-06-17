@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.btn {
+    font-size: prem(20);
+    font-weight: $bold;
+    color: $white;
+    width:100%;
+    height: prem(70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: prem(53);
+    position: relative;
+    @include mq(md) {
+        font-size: prem(32);
+        max-width: prem(428);
+        height:prem(106);
+
+    }
+    &.-arrow {
+        @include mq(md) {
+            padding-right: prem(54);
+        }
+        &::after {
+            content: '';
+            width:prem(21);
+            height:prem(21);
+            background-image: url(../images/icon/icon_arrow_right.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: prem(43);
+            @include mq(md) {
+                width:prem(24);
+                height: prem(24);
+                right: prem(91);
+            }
+        }
+    }
+
+    &::before {
+        content: '';
+        border: prem(2) solid $white;
+        border-radius: prem(53);
+        width:98.2089552239%;
+        height:prem(64);
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        @include mq(md) {
+            width:98.5981308411%;
+            height: prem(100);
+        }
+    }
+
+    &.-blue {
+        background:$gradient-blue;
+    }
+
+    &.-pink {
+        background:$gradient-pink;
+    }
+}

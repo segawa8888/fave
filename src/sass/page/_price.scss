@@ -1,0 +1,78 @@
+@use "global" as *;
+
+.price__content {
+    margin-top: prem(50);
+    padding-left: prem(20);
+    padding-right: prem(20);
+    @include mq(md) {
+        max-width: prem(1080);
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: prem(20);
+        padding-right: prem(20);
+        margin-top: prem(100);
+    }
+}
+
+.price__items {
+    @include mq(md) {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &::before {
+        @include mq(md) {
+            content: '';
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            height: 100%;
+            width:prem(3);
+            background-color: $black;
+            border-radius: prem(20);
+        }
+    }
+}
+
+.price__item {
+    @include mq(md) {
+        max-width: prem(400);
+        width: 100%;
+    }
+}
+
+.price__item:nth-child(n+2) {
+    margin-top: prem(80);
+    @include mq(md) {
+        margin-top: initial;
+    }
+}
+
+.price__moneys {
+    margin-top: prem(40);
+}
+
+.price__money:nth-child(n+2) {
+    margin-top: prem(30);
+}
+
+.price__item:last-child {
+    @include mq(md) {
+        margin-top: initial;
+        position: relative;
+    }
+}
+
+.price__info {
+    display: block;
+    text-align: right;
+    font-size: prem(14);
+    margin-top: prem(10);
+    font-weight: $medium;
+    @include mq(md) {
+        margin-top: prem(20);
+        font-size: prem(16);
+    }
+}

@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.section-title {
+    span {
+        display: block;
+        font-size: prem(16);
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        top:prem(-23);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        @include mq(md) {
+            font-size: prem(20);
+            top: prem(-29);
+        }
+    }
+    font-size: prem(24);
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: prem(20);
+    padding-right: prem(20);
+    @include mq(md) {
+        font-size: prem(40);
+        max-width: prem(1280);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &::after,
+    &:before {
+        content: '';
+        background-color: #002D74;
+        height: prem(2);
+        flex-grow: 1;
+    }
+
+    &::after {
+        margin-left: prem(10);
+        @include mq(md) {
+            margin-left: prem(50);
+        }
+    }
+
+    &::before {
+        margin-right: prem(10);
+        @include mq(md) {
+            margin-right: prem(50);
+        }
+    }
+}
+
+.section-text {
+    text-align: center;
+    font-size: prem(20);
+    font-weight: $bold;
+    margin-top: prem(30);
+    @include mq(md) {
+        margin-top: prem(70);
+        font-size: prem(32);
+    }
+}

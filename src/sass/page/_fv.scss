@@ -1,0 +1,136 @@
+@use "global" as *;
+
+.fv {
+    @include mq(md) {
+        height: 100vh;
+    }
+}
+
+.fv__inner {
+    position: relative;
+    height: 100%;
+}
+
+.fv__img {
+    position: relative;
+    @include mq(md) {
+        height: 100%;
+    }
+    &::after {
+        content: '';
+        width: 100%;         /* 幅いっぱい */
+        height: 100%;        /* 高さいっぱい */
+        display: block;      /* 高さを指定するためにブロック要素にする */
+        background: linear-gradient(rgba(255,255,255,0) 80%, #fff 100%); /* 徐々に透明にする */
+        position: absolute;  /*  */
+        top: 0;
+        left: 0;
+    }
+}
+
+.fv__img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.fv__title-wrap {
+    text-align: center;
+    padding-left: prem(10);
+    padding-right: prem(10);
+    width: 100%;
+    @include mq(md) {
+        position: absolute;
+        max-width:prem(570);
+        top:prem(115);
+        left: initial;
+        right:prem(80);
+        padding-left: initial;
+        padding-right: initial;
+        transform:initial;
+    }
+}
+
+.fv__title {
+    font-size: prem(32);
+    font-weight: $w-black;
+    @include mq(md) {
+        font-size: prem(48);
+    }
+}
+
+.fv__sub-title {
+    margin-top: prem(10);
+    font-size: prem(20);
+    @include mq(md) {
+        margin-top: prem(20);
+        font-size: prem(48);
+    }
+}
+
+.fv__btn-wrap {
+    margin-top: prem(30);
+    max-width: prem(295);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mq(md) {
+        margin-top: prem(40);
+        max-width: prem(570);
+    }
+}
+
+.fv__btn {
+    width: 100%;
+    &:first-child {
+        max-width: prem(130);
+        @include mq(md) {
+            max-width: prem(303);
+        }
+    }
+    &:last-child {
+        max-width: prem(135);
+        @include mq(md) {
+            max-width: prem(227);
+        }
+    }
+}
+
+.fv__cta {
+    width: 100%;
+    height:prem(107);
+    background:linear-gradient(90deg, rgba(0,183,255,0.6) 0%, rgba(255,223,199,0.6) 100%);
+    backdrop-filter: blur(prem(40));
+    margin-top: prem(25);
+    @include mq(md) {
+        height: prem(216);
+    }
+}
+
+.fv__cta-btn {
+    width: 100%;
+    height: 100%;
+    font-size: prem(24);
+    font-weight: $w-black;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    gap:prem(15);
+    align-items: center;
+    position: relative;
+    @include mq(md) {
+        font-size: prem(48);
+        gap:prem(44);
+        padding-left: prem(55);
+    }
+    span {
+        width:prem(40);
+        height: prem(40);
+        @include mq(md) {
+            width: prem(70);
+            height: prem(70);
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@use "global" as *;
+
+.privacy {
+    margin-top: prem(73);
+    margin-bottom: prem(80);
+    @include mq(md) {
+        margin-top: prem(100);
+        margin-bottom: prem(140);
+    }
+}
+
+.privacy__inner {
+    padding-left: prem(20);
+    padding-right: prem(20);
+    @include mq(md) {
+        max-width: prem(1240);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.privacy__desc {
+    font-size: prem(16);
+    text-align: center;
+    margin-top: prem(30);
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: prem(20);
+        font-weight: $black;
+        margin-top: prem(40);
+    }
+}
+
+.privacy__item {
+    margin-top: prem(80);
+    @include mq(md) {
+        margin-top: prem(100);
+    }
+}
+
+.privacy__title {
+    font-size: prem(20);
+    text-align: center;
+    font-weight: $bold;
+    @include mq(md) {
+        font-size: prem(32);
+    }
+}
+
+.privacy__text {
+    font-size: prem(14);
+    font-weight: $medium;
+    margin-top: prem(20);
+    line-height: 1.5;
+    @include mq(md) {
+        font-size: prem(20);
+        max-width: prem(958);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.indent-1 {
+    display: block;
+    padding-left:2.5em;
+	text-indent:-2.5em;
+    @include mq(md) {
+        padding-left:3em;
+        text-indent:-3em;
+    }
+}
+
+.indent-2 {
+    display: block;
+    padding-left:1em;
+    text-indent:-1em;
+}
+
+.indent-3 {
+    display: block;
+    padding-left:1em;
+    text-indent:-1em;
+    @include mq(md) {
+        padding-left:1.7em;
+        text-indent:-1.7em;
+    }
+}

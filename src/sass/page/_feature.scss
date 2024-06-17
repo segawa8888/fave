@@ -1,0 +1,139 @@
+@use "global" as *;
+
+.feature {
+    margin-bottom: prem(50);
+}
+
+.feature__inner {
+    padding-left: prem(20);
+    padding-right: prem(20);
+    @include mq(md) {
+        max-width: prem(1360);
+        padding-left: prem(40);
+        padding-right: prem(40);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.feature__content {
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: prem(15);
+    }
+}
+
+.feature__img {
+    max-width: prem(196);
+    width: 100%;
+    margin-top: prem(30);
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        max-width: prem(428);
+        margin-top: initial;
+        margin-left: initial;
+        margin-right: initial;
+    }
+}
+
+.feature__items {
+    @include mq(md) {
+        max-width: prem(730);
+        width: 100%;
+    }
+}
+
+.feature__item {
+    @include mq(md) {
+        max-width: 75%;
+        width: 100%;
+    }
+}
+
+.feature__wrap {
+    margin-top: prem(20);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    @include mq(md) {
+        margin-top: initial;
+        justify-content: space-between;
+    }
+    &:nth-child(n+2) {
+        margin-top: prem(30);
+        @include mq(md) {
+            margin-top: prem(50);
+        }
+    }
+}
+
+.feature__icon {
+    position: absolute;
+    top: prem(-15);
+    left: prem(-5);
+    width: prem(65);
+    height: prem(65);
+    background-image: url(../images/icon/icon_snow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: prem(24);
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(md) {
+        font-size: prem(36);
+        position: static;
+        width:prem(130);
+        height: prem(130);
+        top: initial;
+        left: initial;
+    }
+}
+
+.feature__wrap:nth-child(2) .feature__icon {
+    @media screen and (max-width:430px) {
+        top:0;        
+    }
+}
+
+.feature__title {
+    padding-left: prem(63);
+    font-size: prem(20);
+    font-weight: $bold;
+    @include mq(md) {
+        padding-left: initial;
+        font-size: prem(32);
+    }
+}
+
+.feature__text {
+    margin-top: prem(21);
+    font-size: prem(14);
+    font-weight: $medium;
+    @include mq(md) {
+        margin-top: prem(10);
+        font-size: prem(16);
+    }
+}
+
+.feature__btns {
+    margin-top: prem(30);
+    display: flex;
+    gap:prem(20);
+    flex-wrap: wrap;
+    @include mq(md) {
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        max-width: prem(890);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: prem(34);
+    }
+}
+

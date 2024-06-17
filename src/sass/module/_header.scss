@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.header {
+    position: absolute;
+    top:prem(50);
+    left:prem(12);
+    z-index: 10;
+    @include mq(md) {
+        top: prem(40);
+        left:prem(80);
+    }
+}
+
+.header__logo {
+    max-width: prem(110);
+    @include mq(md) {
+        max-width: prem(189);
+        width: 100%;
+    }
+}

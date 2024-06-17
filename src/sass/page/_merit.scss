@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.merit__content {
+    margin-top: prem(30);
+    padding-left: prem(20);
+    padding-right: prem(20);
+    @include mq(md) {
+        margin-top: prem(70);
+        max-width: prem(1240);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.merit__items {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: prem(15);
+    row-gap: prem(43);
+    @include mq(md) {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: prem(44);
+        row-gap: prem(67);
+    }
+}
+
+.merit__wrap {
+    margin-top: prem(20);
+    position: relative;
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        margin-top: prem(25);
+    }
+}
+
+.merit__img img {
+    border-radius: prem(5);
+}
+
+.merit__box {
+    @include mq(md) {
+        margin-left: prem(110);
+    }
+}
+
+.merit__icon {
+    position: absolute;
+    top: 0;
+    left: prem(-5);
+    width: prem(50);
+    height: prem(50);
+    background-image: url(../images/icon/icon_snow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: prem(20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(md) {
+        font-size: prem(32);
+        width:prem(100);
+        height: prem(100);
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+}
+
+.merit__title {
+    padding-left: prem(55);
+    font-size: prem(16);
+    font-weight: $bold;
+    @include mq(md) {
+        padding-left: initial;
+        font-size: prem(24);
+    }
+}
+
+.merit__text {
+    margin-top: prem(6);
+    font-size: prem(14);
+    font-weight: $medium;
+    @include mq(md) {
+        margin-top: prem(5);
+        font-size: prem(16);
+    }
+}

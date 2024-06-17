@@ -1,0 +1,147 @@
+body {
+  font-family: "Noto Serif JP", serif;
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+.cta {
+  padding-top: 50px;
+  padding-top: 3.125rem;
+  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
+  background-image: url(../images/top/top_cta_back_sp.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .cta {
+    background-image: url(../images/top/top_cta_back.png);
+    padding-top: 6.8125rem;
+  }
+}
+
+.cta__inner {
+  padding-left: 20px;
+  padding-left: 1.25rem;
+  padding-right: 20px;
+  padding-right: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .cta__inner {
+    max-width: 58.125rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.cta__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cta__icon {
+  max-width: 130px;
+  max-width: 8.125rem;
+  width: 100%;
+  height: 130px;
+  height: 8.125rem;
+}
+@media screen and (min-width: 768px) {
+  .cta__icon {
+    max-width: 21.0625rem;
+    height: 21.0625rem;
+  }
+}
+
+.cta__wrap {
+  text-align: center;
+  max-width: 220px;
+  max-width: 13.75rem;
+  width: 100%;
+  margin-left: -25px;
+  margin-left: -1.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .cta__wrap {
+    margin-left: 0;
+    margin-left: initial;
+    max-width: 100%;
+  }
+}
+
+.cta__title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 900;
+}
+@media screen and (min-width: 768px) {
+  .cta__title {
+    font-size: 3rem;
+  }
+}
+
+.cta__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .cta__text {
+    font-size: 1rem;
+    margin-top: 1.5625rem;
+  }
+}
+
+.cta__bottom {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .cta__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.cta__bottom .btn:last-child {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .cta__bottom .btn:last-child {
+    margin-top: 0;
+    margin-top: initial;
+    margin-left: 2.125rem;
+  }
+}
+/*# sourceMappingURL=bb_cta.css.map */
